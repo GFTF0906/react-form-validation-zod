@@ -1,10 +1,9 @@
 export default function SubmitSuccess() {
   return (
     <>
-      <div className="absolute right-4 bottom-8 flex items-center justify-center p-4 rounded rounded-r-none text-neutral-700 bg-neutral-100">
+      <div className="flex items-center justify-center p-4 mt-3 rounded font-bold text-neutral-700 bg-neutral-100 sm:absolute sm:right-4 sm:bottom-8 sm:mt-0">
         Submit Successful!
       </div>
-      <div className="absolute right-0 bottom-8 w-4 h-[3.55rem] bg-neutral-600"></div>
     </>
   );
 }

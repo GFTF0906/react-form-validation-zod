@@ -11,6 +11,7 @@ export type TIndexable<T, U> = { [key in U as string]: T };
 
 type InputProps = {
   labelText: string;
+  inputType: 'text' | 'email' | 'password';
   inputID: string;
   register: CallableFunction;
   errors: TIndexable<{ message?: string }, ErrorsKeys>;
@@ -18,6 +19,7 @@ type InputProps = {
 
 export default function Input({
   labelText,
+  inputType,
   inputID,
   register,
   errors,
@@ -27,7 +29,7 @@ export default function Input({
       <label htmlFor={inputID} className="capitalize">
         {labelText}
       </label>
-      <input type="text" id={inputID} {...register(inputID)} />
+      <input type={inputType} id={inputID} {...register(inputID)} />
       <ErrorMessage message={errors[inputID]?.message ?? ''} />
     </div>
   );

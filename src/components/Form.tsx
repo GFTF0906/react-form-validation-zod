@@ -32,14 +32,15 @@ export default function Form() {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col w-[500px] text-neutral-900 bg-neutral-100"
+        className="flex flex-col w-full text-neutral-900 bg-neutral-100 sm:w-[500px]"
       >
         <Title text="Login" />
 
         <section className="flex flex-col p-8 gap-2">
-          <div className="flex justify-between items-center w-full">
+          <div className="flex justify-center items-center flex-col w-full sm:justify-between sm:flex-row">
             <Input
               labelText="First Name"
+              inputType="text"
               inputID={'firstName'}
               register={register}
               errors={errors}
@@ -47,6 +48,7 @@ export default function Form() {
 
             <Input
               labelText="Last Name"
+              inputType="text"
               inputID={'lastName'}
               register={register}
               errors={errors}
@@ -55,6 +57,7 @@ export default function Form() {
 
           <Input
             labelText="Email"
+            inputType="email"
             inputID={'email'}
             register={register}
             errors={errors}
@@ -62,6 +65,7 @@ export default function Form() {
 
           <Input
             labelText="Password"
+            inputType="password"
             inputID={'password'}
             register={register}
             errors={errors}
@@ -69,6 +73,7 @@ export default function Form() {
 
           <Input
             labelText="Confirm Password"
+            inputType="password"
             inputID={'confirmPassword'}
             register={register}
             errors={errors}
