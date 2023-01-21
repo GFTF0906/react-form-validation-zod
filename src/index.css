@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply min-h-screen flex justify-center items-center flex-col text-neutral-100 bg-neutral-800;
+}
+
+label,
+button {
+  @apply font-bold;
+}
+
+input,
+button {
+  @apply p-2 rounded transition-all;
+}
+
+input {
+  @apply bg-neutral-300 focus:bg-opacity-30;
+}
+
+.error {
+  @apply text-red-400;
+}
